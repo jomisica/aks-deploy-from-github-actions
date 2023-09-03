@@ -8,6 +8,7 @@ build:
 
 .PHONY: registry-login
 registry-login:
+	echo ${{ secrets.ACR_NAME }}
 	@az login \
 		--service-principal \
 		--username $(SERVICE_PRINCIPAL_APP_ID) \
