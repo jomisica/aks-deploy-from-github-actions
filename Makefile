@@ -13,7 +13,7 @@ registry-login:
 		--username $(SERVICE_PRINCIPAL_APP_ID) \
 		--password $(SERVICE_PRINCIPAL_SECRET) \
 		--tenant $(SERVICE_PRINCIPAL_TENANT)
-	@az acr login --name $(ACR_NAME)
+	@az acr login --name ${{ secrets.ACR_NAME }}
 
 .PHONY: push
 push:
